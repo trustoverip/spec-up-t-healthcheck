@@ -1,5 +1,17 @@
 #!/usr/bin/env node
 
+/**
+ * @fileoverview Command Line Interface for spec-up-t-healthcheck
+ * 
+ * This CLI tool provides a convenient command-line interface for running health checks
+ * on specification repositories. It supports various output formats, check selection,
+ * and file output options. The CLI is built using Commander.js and provides a user-friendly
+ * interface for all health checking functionality.
+ * 
+ * @author spec-up-t-healthcheck
+ * @version 1.0.1-beta
+ */
+
 import { Command } from 'commander';
 import { createProvider, runHealthChecks, formatResultsAsText, formatResultsAsJson } from '../lib/index.js';
 
@@ -10,6 +22,31 @@ program
   .description('Health check tool for spec-up-t repositories')
   .version('1.0.0');
 
+/**
+ * Main 'check' command that performs health checks on a repository.
+ * 
+ * This command creates a provider for the target repository, runs the specified
+ * health checks, and outputs the results in the requested format. It supports
+ * both local and remote repositories (when implemented) and provides flexible
+ * output options.
+ * 
+ * Exit codes:
+ * - 0: All checks passed
+ * - 1: One or more checks failed or command error
+ * - 2: Checks passed but with warnings
+ * 
+ * @example
+ * ```bash
+ * # Basic usage
+ * spec-up-t-healthcheck check ./my-repo
+ * 
+ * # Specific checks only
+ * spec-up-t-healthcheck check ./my-repo --checks package-json
+ * 
+ * # JSON output to file
+ * spec-up-t-healthcheck check ./my-repo --format json --output report.json
+ * ```
+ */
 program
   .command('check')
   .description('Run health checks on a repository')
@@ -58,6 +95,13 @@ program
     }
   });
 
+/**
+ * 'list-checks' command that displays available health checks.
+ * 
+ * This informational command helps users discover what health checks are available
+ * and understand what each check validates. It provides descriptions of each check
+ * and examples of how to use them.
+ */
 program
   .command('list-checks')
   .description('List available health checks')
@@ -68,6 +112,13 @@ program
     console.log('\nUsage: spec-up-t-healthcheck check <target> --checks package-json,spec-files');
   });
 
+/**
+ * 'example' command that demonstrates CLI usage patterns.
+ * 
+ * This command provides practical examples of how to use the CLI tool
+ * with different options and scenarios. It helps users understand the
+ * available command-line options and common usage patterns.
+ */
 program
   .command('example')
   .description('Show usage examples')
@@ -83,4 +134,8 @@ program
     console.log('  spec-up-t-healthcheck check ./repo --output report.txt');
   });
 
+/**
+ * Parse and execute the command line arguments.
+ * This must be called at the end to process user input.
+ */
 program.parse();
