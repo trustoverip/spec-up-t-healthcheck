@@ -1,0 +1,73 @@
+{
+  "name": "spec-up-t-healthcheck",
+  "version": "1.0.0-beta",
+  "description": "Modular health check tool for spec-up-t repositories - works in Node.js, browsers, and CLI",
+  "type": "module",
+  "main": "lib/index.js",
+  "bin": {
+    "spec-up-t-healthcheck": "bin/cli.js"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./web": "./lib/web.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint lib test",
+    "lint:fix": "eslint lib test --fix",
+    "cli": "node bin/cli.js",
+    "example": "node examples/node-usage.js"
+  },
+  "keywords": [
+    "spec-up-t",
+    "health-check",
+    "validation",
+    "specification",
+    "markdown",
+    "cli",
+    "npm",
+    "quality-assurance"
+  ],
+  "author": "Blockchain Bird",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blockchainbird/spec-up-t-healthcheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blockchainbird/spec-up-t-healthcheck/issues"
+  },
+  "homepage": "https://github.com/blockchainbird/spec-up-t-healthcheck#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "axios": "^1.5.0",
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "jest": "^29.6.0",
+    "nodemon": "^3.0.0"
+  },
+  "peerDependencies": {
+    "node-fetch": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "node-fetch": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
