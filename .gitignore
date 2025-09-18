@@ -99,7 +99,6 @@ dist
 .tern-port
 
 # Build output
-lib/
 dist/
 
 # IDE
