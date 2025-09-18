@@ -1,0 +1,8 @@
+- All code will have to pass SonarQube analysis
+- A very modular approach is preferred, the overhead is acceptable
+- Cognitive complexity should be kept ideally below 15
+- Remove code if possible, instead of adding code
+- If you create files, explain why they are not deleted, why they should stay, and how to use them
+- Be generous with writing explanations for each block of code
+- Please remind me to test on a separate testmachine
+- Never commit on your own. Always ask before
