@@ -1,6 +1,6 @@
 {
   "name": "spec-up-t-healthcheck",
-  "version": "1.0.1-beta",
+  "version": "1.0.2",
   "description": "Modular health check tool for spec-up-t repositories - works in Node.js, browsers, and CLI",
   "type": "module",
   "main": "lib/index.js",
@@ -17,7 +17,11 @@
     "lint": "eslint lib test",
     "lint:fix": "eslint lib test --fix",
     "cli": "node bin/cli.js",
-    "example": "node examples/node-usage.js"
+    "example": "node examples/node-usage.js",
+    "examples": "node examples/comprehensive-usage.js",
+    "healthcheck": "node bin/cli.js check .",
+    "healthcheck:html": "node bin/cli.js check . --format html",
+    "demo:html": "node bin/demo-html.js"
   },
   "keywords": [
     "spec-up-t",

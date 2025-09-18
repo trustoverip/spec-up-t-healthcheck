@@ -12,7 +12,7 @@
  * the target for demonstration purposes.
  * 
  * @author spec-up-t-healthcheck
- * @version 1.0.1-beta
+ 
  */
 
 // Note: Using require() syntax for compatibility demonstration

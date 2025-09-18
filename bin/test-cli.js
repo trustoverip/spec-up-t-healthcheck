@@ -11,7 +11,6 @@
  * import/export issues during the build process.
  * 
  * @author spec-up-t-healthcheck
- * @version 1.0.1-beta
  */
 
 import { healthCheck } from '../lib/index.js';

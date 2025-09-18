@@ -13,7 +13,6 @@
  * basic environment validation.
  * 
  * @author spec-up-t-healthcheck
- * @version 1.0.1-beta
  */
 
 /**
