@@ -1,3 +1,4 @@
+- Keep in mind that the validation code needs to work on the trustoverip/spec-up-t repo and also on the GitHubUi repo
 - All code will have to pass SonarQube analysis
 - A very modular approach is preferred, the overhead is acceptable
 - Cognitive complexity should be kept ideally below 15
