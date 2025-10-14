@@ -1,4 +1,5 @@
 - Keep in mind that the validation code needs to work on the trustoverip/spec-up-t repo and also on the GitHubUi repo
+- This means that the JavaScript that does the checks should be able to run in Node.js AND in Client Side JS, so things like `path.join` cannot be used
 - When implementing a new healthcheck in spec-up-t repo, also implement it in GitHubUi
 - All code will have to pass SonarQube analysis
 - A very modular approach is preferred, the overhead is acceptable
