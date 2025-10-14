@@ -9,7 +9,8 @@
   },
   "exports": {
     ".": "./lib/index.js",
-    "./web": "./lib/web.js"
+    "./web": "./lib/web.js",
+    "./lib/formatters/result-details-formatter.js": "./lib/formatters/result-details-formatter.js"
   },
   "scripts": {
     "test": "jest",
